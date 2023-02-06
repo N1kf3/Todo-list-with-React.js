@@ -14,7 +14,7 @@ const List = () => {
                     return [...prev,inputValue];
                 });     
                 setInputValue("");                       
-            } else alert("ingrese algun item a la lista");  
+            } else if((inputValue == "") && (keyPressed == "Enter") || (e.target.id ==="button" && inputValue == "") )alert("Escribir item en la lista");  
         
     };
 
