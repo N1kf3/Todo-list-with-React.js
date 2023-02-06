@@ -13,13 +13,15 @@ const List = () => {
                 setItemLista((prev)=>{
                     return [...prev,inputValue];
                 });     
-                setInputValue("");             
-            };  
+                setInputValue("");                       
+            } else alert("ingrese algun item a la lista");  
         
     };
 
     const deleteListElement = (e)=>{
-        let idAEliminar = e.target.parentElement.id;
+        console.log(itemsLista);
+        let idAEliminar = e.target.parentElement.parentElement.id;
+        console.log(idAEliminar);
         setItemLista( itemsLista.filter((item,index)=>{
             if (index != idAEliminar){            
                 return item
